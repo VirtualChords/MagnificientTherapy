@@ -1,0 +1,46 @@
+<h3>My Profile</h3>
+<hr />
+<div class="row">
+        <div class="col-md-3 col-12">
+            <div class="mt-md-5">
+                <img class="img-fluid rounded-circle" style="overflow: hidden; border-radius: 50%"
+                    src={{profile.picture}} alt="">
+            </div>
+        </div>
+        <div class="col-md-9 col-12">
+                <form>
+
+            <button class="btn btn-secondary" ng-hide="profile.editing" ng-click="profile.edit()">Edit</button>
+            <button class="btn btn-warning" ng-show="profile.editing" ng-click="profile.cancel()">Cancel</button>
+            <br>
+            <div class="form-group">
+                <label for="Username">Username</label>
+                <for-profile value="profile.username" editing="profile.editing" />
+            </div>
+                <br>
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <for-profile value="profile.name" editing="profile.editing" />
+            </div>
+                <br>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <for-profile value="profile.address" editing="profile.editing" />
+            </div>
+                <br>
+            <div class="form-group">
+                <label for="Phone">Phone Number</label>
+                <for-profile type="tel" value="profile.phone" editing="profile.editing" />
+            </div>
+                <br>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <p ng-show="profile.editing"><i>Pls note that changing ur email will affect your login</i></p>
+                <for-profile type="email" value="profile.email" editing="profile.editing" />
+            </div>
+                <button type="submit" class="btn btn-primary" ng-show=profile.editing
+                ng-click="profile.makeEdit(profile)">Confirm</button>
+            </form>
+
+        </div>
+</div>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magnitherapy</title>
+
+    <script src="./assets/js/angular.js"></script>
+    <script src="./assets/js/angular-animate.js"></script>
+    <script src="./assets/js/angular-route.js"></script>
+    <script src="./assets/js/angular-resource.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/bootstrapOffcanvas.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="./app/main.js"></script>
+    <script src="./app/routes.js"></script>
+</head>
+
+<body ng-app="app">
+    <nav class="navbar navbar-nav navbar-expand-md navbar-dark px-4 bg-dark sticky-top shadow">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand">Magnitherapy</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapseNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav collapse navbar-collapse justify-content-end" id="collapseNav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ng-click="doLogout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <button class="navbar-toggler bg-light navbar-light d-lg-none float-left mt-0" type="button"
+            data-toggle="offcanvas" data-target="#sidenavOffcanvas">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="row">
+            <div class="col-md-2 d-md-block">
+                <nav class="nav nav-pills nav-stacked navbar bg-light navbar-collapse offcanvas-collapse" id="sidenavOffcanvas"
+                    data-toggle="offcanvas">
+                    <a href="/" data-toggle="pill" data-target="#sidenavOffcanvas"
+                        class="nav-item nav-link active">Dashboard</a>
+                    <a href="/messages" data-toggle="pill" data-target="#sidenavOffcanvas"
+                        class="nav-item nav-link">Messages &nbsp;<span
+                            class="badge badge-light float-right">5</span></a>
+                    <a href="/gallery" data-toggle="pill" data-target="#sidenavOffcanvas"
+                        class="nav-item nav-link">Gallery</a>
+                    <a href="/u&e" data-toggle="pill" data-target="#sidenavOffcanvas" class="nav-item nav-link">Updates
+                        & Events</a>
+
+                        <h4 class="text-muted">inside mts</h4>
+                        <br>
+
+                        <a href="/team" data-toggle="pill" data-target="#sidenavOffcanvas"
+                        class="nav-item nav-link">Our Team</a>
+                    <a href="/profile" data-toggle="pill" data-target="#sidenavOffcanvas"
+                        class="nav-item nav-link">Profile</a>
+                    <a href="/registrations" data-toggle="pill" data-target="#sidenavOffcanvas"
+                        class="nav-item nav-link">Registrations</a>
+                    <a href="/admins" data-toggle="pill" data-target="#sidenavOffcanvas" class="nav-item nav-link">Admins</a>
+                </nav>
+                
+            </div>
+
+            <div class="col-md-10" ng-view></div>
+
+        </div>
+    </div>
+
+<!-- Scripts for the site's animation and responsiveness -->
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/myjs.js"></script>
+    <script src="./assets/js/bootstrap1.js"></script>
+    <script src="./assets/js/bootstrapOffcanvas.js"></script>
+</body>
+
+</html>

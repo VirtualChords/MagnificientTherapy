@@ -1,0 +1,33 @@
+.alert-dismissable{
+    -webkit-animation:zoomIn 0.5s both ease;
+    -moz-animation: zoomIn 0.5s both ease;
+    animation: zoomIn 0.5s both ease;
+}
+
+.scrollable {
+    overflow-y : scroll
+}
+
+/* width */
+.scrollable::-webkit-scrollbar {
+	width: 10px;
+}
+  
+  /* Track */
+.scrollable::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	border-radius: 10px;
+}
+   
+  /* Handle */
+.scrollable::-webkit-scrollbar-thumb {
+	/* background: red;  */
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));
+}
+  
+  /* Handle on hover */
+.scrollable::-webkit-scrollbar-thumb:hover {
+	transition: all 0.5s ease-in-out;
+	background: rgb(28,58,148);
+}

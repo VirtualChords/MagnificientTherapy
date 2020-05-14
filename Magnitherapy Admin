@@ -1,0 +1,17 @@
+magnitherapy (admin) is the administrative dashboard of the magnificient therapy site.
+the admin dashboard should contain certain pages:
+
+	Dashboard
+	Profile	(done)
+	Messages
+	Updates and Events
+	Gallery
+	Our team
+	Registered students
+	Signin	(done)
+	Register/Add Administrators
+
+on behalf of the user experience being tried to be created, there would be a "404 page"
+
+I think that should be the end of the whole page
+
