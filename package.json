@@ -20,7 +20,7 @@
     "http-errors": "^1.7.3",
     "imap": "^0.8.19",
     "jquery": "^3.4.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mailparser": "^2.7.7",
     "mongoose": "^5.7.10",
     "morgan": "^1.9.1",
